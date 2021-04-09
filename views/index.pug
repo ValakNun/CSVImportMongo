@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  br
+  h2 CSV File is Public/Files/products.csv Folder
+  br
+  p
+   a(href='javascript:void(0)' class='btn btn-primary' id='importdata') Import CSV 
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='fetchdata') Fetch Data
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='cleardata') Clear Data
+   | &nbsp;&nbsp;&nbsp;
+  br  
+  p#message.alert.alert-success(style='display:none')
+  br
+  table.table.table-bordered
+    thead
+        tr
+            th #
+            th ID
+            th Region
+            th Country
+            th Item Type
+            th Sales Channel
+    tbody#trdata
+        tr
+            td(colspan='3') Click on <strong>Import CSV</strong> button to import and save data to MongoDB. <br />Click on <strong>Fetch Data</strong> button to display data from database
